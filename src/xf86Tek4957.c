@@ -21,7 +21,7 @@
  * TORTIOUS ACTIONS, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  */
-/* $XFree86: xc/programs/Xserver/hw/xfree86/input/tek4957/xf86Tek4957.c,v 1.1 2002/11/11 01:18:08 alanh Exp $ */
+/* $XFree86$ */
 
 #ifndef XFree86LOADER
 #include <unistd.h>
@@ -758,7 +758,7 @@ static XF86ModuleVersionInfo TekVersionRec =
     MODULEVENDORSTRING,
     MODINFOSTRING1,
     MODINFOSTRING2,
-    XF86_VERSION_CURRENT,
+    XORG_VERSION_CURRENT,
     1, 0, 0,
     ABI_CLASS_XINPUT,
     ABI_XINPUT_VERSION,
