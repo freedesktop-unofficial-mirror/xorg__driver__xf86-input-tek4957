@@ -1,3 +1,4 @@
+/* $XdotOrg:$ */
 /*
  * Copyright 2002 by Olivier DANET <odanet@caramail.com>
  *
@@ -21,7 +22,7 @@
  * TORTIOUS ACTIONS, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  */
-/* $XFree86$ */
+/* $XFree86: xc/programs/Xserver/hw/xfree86/input/tek4957/xf86Tek4957.c,v 1.1 2002/11/11 01:18:08 alanh Exp $ */
 
 #ifndef XFree86LOADER
 #include <unistd.h>
@@ -589,16 +590,16 @@ TekInit(InputDriverPtr	drv,
     local->old_y = -1;
 
 #if defined (sun) && !defined(i386)
-    char *dev_name;
-#endif
+    {
+	char *dev_name;
 
-#if defined(sun) && !defined(i386)
-    if ((dev_name = getenv("TEK4957_DEV"))) {
-	priv->Device = xalloc(strlen(dev_name) + 1);
-	strcpy(priv->Device, dev_name);
-	xf86Msg(X_INFO,"Tek4957:Port selected : %s\n", priv->Device);
-    } else {
-	priv->Device = "";
+	if ((dev_name = getenv("TEK4957_DEV"))) {
+	    priv->Device = xalloc(strlen(dev_name) + 1);
+	    strcpy(priv->Device, dev_name);
+	    xf86Msg(X_INFO,"Tek4957:Port selected : %s\n", priv->Device);
+	} else {
+	    priv->Device = "";
+	}
     }
 #else
     priv->Device = "";         /* device file name */
