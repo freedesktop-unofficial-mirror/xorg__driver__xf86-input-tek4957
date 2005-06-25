@@ -1,4 +1,4 @@
-/* $XdotOrg:$ */
+/* $XdotOrg: xc/programs/Xserver/hw/xfree86/input/tek4957/xf86Tek4957.c,v 1.3 2004/04/25 23:16:59 alanc Exp $ */
 /*
  * Copyright 2002 by Olivier DANET <odanet@caramail.com>
  *
@@ -708,7 +708,7 @@ TekInit(InputDriverPtr	drv,
 #ifdef XFree86LOADER
 static
 #endif
-InputDriverRec TEK4957 = {
+_X_EXPORT InputDriverRec TEK4957 = {
     1,			/* driver version */
     "tek4957",		/* driver name */
     NULL,		/* identify */
@@ -768,9 +768,11 @@ static XF86ModuleVersionInfo TekVersionRec =
 				/* a tool */
 };
 
-XF86ModuleData tek4957ModuleData = {&TekVersionRec,
-				  TekPlug,
-				  TekUnplug};
+_X_EXPORT XF86ModuleData tek4957ModuleData = {
+    &TekVersionRec,
+    TekPlug,
+    TekUnplug
+};
 
 #endif /* XFree86LOADER */
 
