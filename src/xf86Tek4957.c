@@ -705,9 +705,6 @@ TekInit(InputDriverPtr	drv,
     return local;
 }
 
-#ifdef XFree86LOADER
-static
-#endif
 _X_EXPORT InputDriverRec TEK4957 = {
     1,			/* driver version */
     "tek4957",		/* driver name */
