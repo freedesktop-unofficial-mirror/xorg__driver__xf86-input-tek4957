@@ -1,4 +1,4 @@
-/* $XdotOrg: xc/programs/Xserver/hw/xfree86/input/tek4957/xf86Tek4957.c,v 1.3 2004/04/25 23:16:59 alanc Exp $ */
+/* $XdotOrg: xc/programs/Xserver/hw/xfree86/input/tek4957/xf86Tek4957.c,v 1.5 2005/06/27 18:32:54 ajax Exp $ */
 /*
  * Copyright 2002 by Olivier DANET <odanet@caramail.com>
  *
@@ -29,7 +29,7 @@
 #include <errno.h>
 #endif
 
-#include "misc.h"
+#include <X11/misc.h>
 #include "xf86.h"
 #define NEED_XF86_TYPES
 #if !defined(DGUX)
