@@ -29,7 +29,7 @@
 #include <errno.h>
 #endif
 
-#include <X11/misc.h>
+#include "misc.h"
 #include "xf86.h"
 #define NEED_XF86_TYPES
 #if !defined(DGUX)
