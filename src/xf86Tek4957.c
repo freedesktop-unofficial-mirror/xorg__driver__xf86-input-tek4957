@@ -43,7 +43,7 @@
 #include "xf86_OSproc.h"
 #include "xf86Xinput.h"
 #include "exevents.h"
-#include "keysym.h"
+#include <X11/keysym.h>
 #include "mipointer.h"
 
 #ifdef XFree86LOADER
