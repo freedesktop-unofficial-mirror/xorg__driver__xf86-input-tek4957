@@ -446,7 +446,10 @@ TekProc(DeviceIntPtr pDev, int what)
 		return !Success;
 	    }
 
-	    if (InitValuatorClassDeviceStruct(pDev,2,xf86GetMotionEvents,
+	    if (InitValuatorClassDeviceStruct(pDev,2,
+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 3
+			xf86GetMotionEvents,
+#endif
 		   local->history_size,Absolute)== FALSE) {
 		xf86Msg(X_ERROR,"Tek4957:Unable to allocate Valuator class device\n");
 		return !Success;
