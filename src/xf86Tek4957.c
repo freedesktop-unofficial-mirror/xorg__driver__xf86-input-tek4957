@@ -152,7 +152,11 @@ TekConvert(LocalDevicePtr	local,
 
     /* Gets current screen size. It can change dynamically in the case of
     a multi-head configuration with different screen sizes ... */
+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) == 0
     SP=miPointerCurrentScreen();
+#else
+    SP=miPointerGetScreen(local->dev);
+#endif
     W=SP->width;
     H=SP->height;
 
