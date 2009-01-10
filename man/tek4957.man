@@ -80,6 +80,6 @@ Y coordinate of the bottom corner of the active zone. ( Default = full scale )
 .SH "BUGS / LIMITATIONS"
 Currently, only "Absolute" mode is supported ( Sorry )
 .SH "SEE ALSO"
-__xservername__(__appmansuffix__), __xconfigfile__(__filemansuffix__), xorgconfig(__appmansuffix__), Xserver(__appmansuffix__), X(__miscmansuffix__).
+__xservername__(__appmansuffix__), __xconfigfile__(__filemansuffix__), Xserver(__appmansuffix__), X(__miscmansuffix__).
 .SH AUTHORS
 Olivier DANET <odanet@caramail.com>
